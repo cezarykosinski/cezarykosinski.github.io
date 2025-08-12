@@ -1,2 +1,2 @@
-# cezarykosinski.github.io
-Sztoskmina place of origin 
+
+# Sztoskmina place of origin 
