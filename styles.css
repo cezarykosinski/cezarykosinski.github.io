@@ -1,0 +1,89 @@
+
+/* Add font files for Kode Mono */
+@font-face {
+  font-family: 'Kode Mono';
+  src: url('fonts/kode-mono.woff2') format('woff2'),
+       url('fonts/kode-mono.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Add font files for Just Me Again Down Here */
+@font-face {
+  font-family: 'Just Me Again Down Here';
+  src: url('fonts/just-me-again-down-here.woff2') format('woff2'),
+       url('fonts/just-me-again-down-here.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+:root {
+  --font-family-kode-mono: 'Kode Mono', sans-serif;
+  --font-family-just-me-again-down-here: 'Just Me Again Down Here', sans-serif;
+  --text-black: rgba(0, 0, 0, 1);
+}
+
+.text-black {
+  color: var(--text-black);
+}
+
+
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.text-2 {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  font-family: var(--font-family-kode-mono);
+  font-weight: normal;
+  font-size: 48px;
+  text-decoration: none;
+  text-transform: none;
+  color: var(--text-black);
+}
+
+.text-3 {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  font-family: var(--font-family-just-me-again-down-here);
+  font-weight: normal;
+  font-size: 96px;
+  text-decoration: none;
+  text-transform: none;
+  color: var(--text-black);
+}
+
+.desktop-1-1 {
+@media (max-width: 1440px) {
+  .desktop-1-1 {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .desktop-1-1 {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+}
