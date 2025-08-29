@@ -1,9 +1,7 @@
-
 /* Add font files for Kode Mono */
 @font-face {
   font-family: 'Kode Mono';
-  src: url('fonts/kode-mono.woff2') format('woff2'),
-       url('fonts/kode-mono.woff') format('woff');
+  src: url('fonts/kode-mono.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -11,21 +9,20 @@
 /* Add font files for Just Me Again Down Here */
 @font-face {
   font-family: 'Just Me Again Down Here';
-  src: url('fonts/just-me-again-down-here.woff2') format('woff2'),
-       url('fonts/just-me-again-down-here.woff') format('woff');
+  src: url('fonts/just-me-again-down-here.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
+
 :root {
-  --font-family-kode-mono: 'Kode Mono', sans-serif;
-  --font-family-just-me-again-down-here: 'Just Me Again Down Here', sans-serif;
+  --font-family-kode-mono: 'Kode Mono', monospace;
+  --font-family-just-me-again-down-here: 'Just Me Again Down Here', cursive;
   --text-black: rgba(0, 0, 0, 1);
 }
 
 .text-black {
   color: var(--text-black);
 }
-
 
 /* CSS Reset */
 * {
@@ -38,6 +35,8 @@ body {
   width: 100%;
   min-height: 100vh;
   overflow-x: hidden;
+  background: linear-gradient(180deg, #FFD700 0%, #90EE90 100%);
+  font-family: Arial, sans-serif;
 }
 
 img {
@@ -45,31 +44,41 @@ img {
   height: auto;
 }
 
+.desktop-1-1 {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 60px 24px;
+  position: relative;
+}
+
 .text-2 {
-  flex-grow: 0;
-  flex-shrink: 1;
-  flex-basis: auto;
   font-family: var(--font-family-kode-mono);
   font-weight: normal;
   font-size: 48px;
   text-decoration: none;
   text-transform: none;
   color: var(--text-black);
+  position: absolute;
+  top: 60px;
+  left: 24px;
 }
 
 .text-3 {
-  flex-grow: 0;
-  flex-shrink: 1;
-  flex-basis: auto;
   font-family: var(--font-family-just-me-again-down-here);
   font-weight: normal;
   font-size: 96px;
   text-decoration: none;
   text-transform: none;
   color: var(--text-black);
+  position: absolute;
+  bottom: 60px;
+  right: 24px;
 }
 
-.desktop-1-1 {
 @media (max-width: 1440px) {
   .desktop-1-1 {
     padding-left: 24px;
@@ -82,8 +91,12 @@ img {
     padding-left: 16px;
     padding-right: 16px;
   }
-}
-  flex-grow: 0;
-  flex-shrink: 1;
-  flex-basis: auto;
+  
+  .text-2 {
+    font-size: 36px;
+  }
+  
+  .text-3 {
+    font-size: 72px;
+  }
 }
